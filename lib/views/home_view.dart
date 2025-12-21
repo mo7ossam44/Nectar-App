@@ -10,18 +10,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 66),
-          // Image.asset('Assets/Images/logo_of_app.svg'),
-          // Center(
-          //   child: SvgPicture.asset(
-          //     'Assets/Images/logo_of_app.svg',
-          //     width: 50,
-          //     height: 56,
-          //   ),
-          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -44,24 +34,9 @@ class HomeView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: AppColors.greyBackgroundoftextfield,
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: AppColors.greyBackgroundoftextfield,
-                  ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: AppColors.greyBackgroundoftextfield,
-                  ),
-                ),
+                enabledBorder: outlineBorderMethod(),
+                focusedBorder: outlineBorderMethod(),
+                border: outlineBorderMethod(),
                 fillColor: AppColors.greyBackgroundoftextfield,
                 filled: true,
                 prefixIcon: Icon(Icons.search, size: 18),
@@ -156,5 +131,14 @@ class HomeView extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  OutlineInputBorder outlineBorderMethod() {
+    return OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  color: AppColors.greyBackgroundoftextfield,
+                ),
+              );
   }
 }
