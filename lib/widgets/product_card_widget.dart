@@ -1,12 +1,11 @@
-
 import 'package:build_ui/constants/app_font_styles.dart';
+import 'package:build_ui/models/product_model.dart';
 import 'package:flutter/material.dart';
-import 'package:svg_flutter/svg.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({
-    super.key,
-  });
+  const ProductCard({super.key, required this.productModel});
+
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -22,32 +21,28 @@ class ProductCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SvgPicture.asset(
-            'Assets/Images/banana_image.svg',
-            height: 80,
-          ),
+          Center(child: Image.asset(productModel.image, height: 80)),
           const SizedBox(height: 25),
           Text(
-            'Organic Bananas',
-            style:
-                AppFontStyles.fontSize16Weight400WithColorBlack,
+            productModel.name,
+            style: AppFontStyles.fontSize16Weight400WithColorBlack,
           ),
           const SizedBox(height: 6),
           Text(
-            '7pcs',
-            style: AppFontStyles.fontSize14Weight600WithGreyColor
-                .copyWith(fontWeight: FontWeight.w400),
+            productModel.quantity,
+            style: AppFontStyles.fontSize14Weight600WithGreyColor.copyWith(
+              fontWeight: FontWeight.w400,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                r'$4.99',
-                style: AppFontStyles
-                    .fontSize24Weight600WithColorBlack
-                    .copyWith(fontSize: 18),
+                productModel.price,
+                style: AppFontStyles.fontSize24Weight600WithColorBlack.copyWith(
+                  fontSize: 18,
+                ),
               ),
-    
               Container(
                 height: 46,
                 width: 46,
