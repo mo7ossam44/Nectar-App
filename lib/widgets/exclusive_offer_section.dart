@@ -1,8 +1,7 @@
-
-import 'package:build_ui/constants/app_font_styles.dart';
-import 'package:build_ui/constants/const.dart';
-import 'package:build_ui/widgets/product_card_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:build_ui/constants/const.dart';
+import 'package:build_ui/constants/app_font_styles.dart';
+import 'package:build_ui/widgets/product_card_widget.dart';
 
 class ExclusiveOfferSection extends StatelessWidget {
   const ExclusiveOfferSection({super.key});

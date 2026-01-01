@@ -1,8 +1,7 @@
-import 'package:build_ui/constants/app_font_styles.dart';
-import 'package:build_ui/constants/constant_colors.dart';
-import 'package:build_ui/methodes/outline_method.dart';
-import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:flutter/material.dart';
+import 'package:build_ui/constants/app_font_styles.dart';
+import 'package:build_ui/widgets/custom_search_bar.dart';
 
 class HeaderSearchSection extends StatelessWidget {
   const HeaderSearchSection({super.key});
@@ -29,21 +28,7 @@ class HeaderSearchSection extends StatelessWidget {
           ],
         ),
         SizedBox(height: 17.35),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: TextField(
-            decoration: InputDecoration(
-              enabledBorder: outlineBorderMethod(),
-              focusedBorder: outlineBorderMethod(),
-              border: outlineBorderMethod(),
-              fillColor: AppColors.greyBackgroundoftextfield,
-              filled: true,
-              prefixIcon: Icon(Icons.search, size: 18),
-              hintText: 'Search Store',
-              hintStyle: AppFontStyles.fontSize14Weight600WithGreyColor,
-            ),
-          ),
-        ),
+        CustomSearchBar(),
       ],
     );
   }

@@ -29,4 +29,10 @@ class AppFontStyles {
     fontSize: 16,
     color: Color(0xff181725),
   );
+  static TextStyle fontSize20WeightBoldWithColorBlack = TextStyle(
+    fontFamily: "Gilroy-Bold",
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Color(0xff181725),
+  );
 }
