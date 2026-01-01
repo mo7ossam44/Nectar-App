@@ -1,3 +1,4 @@
+import 'package:build_ui/views/my_cart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:build_ui/views/explore_view.dart';
 
@@ -10,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: ExploreView());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartView());
   }
 }
